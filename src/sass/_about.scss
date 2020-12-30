@@ -1,0 +1,64 @@
+.about {
+  background-color: $bg-white;
+}
+
+.about .wrapper {
+  width: 1020px;
+  height: 733px;
+  margin: 0 auto;
+  background-color: $bg-white;
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  grid-template-rows: 60px 100px 1fr 443px 73px;
+}
+
+.about__header {
+  grid-area: 2 / 2 / span 1 / span 1;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  .description {
+    align-self: end;
+    width: 920px;
+  }
+}
+
+.about__cards {
+  grid-area: 4 / 2 / span 1 / span 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.about__card {
+  display: grid;
+  grid-template-rows: 300px 17px 20px 7px 55px 12px 32px;
+}
+
+.about__card-name {
+  @include card-title;
+  grid-row: 3 / span 1;
+}
+
+.about__card-description {
+  @include card-description;
+  grid-row: 5 / span 1;
+}
+
+.about__card-contacts {
+  width: 152px;
+  height: 32px;
+  display: grid;
+  grid-row: 7 / span 1;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 32px;
+  gap: 8px;
+  div {
+    width: 32px;
+    img:hover {
+      cursor: pointer;
+    }
+    img:active {
+      transform: scale(0.9);
+    }
+  }
+} 
