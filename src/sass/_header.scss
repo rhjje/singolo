@@ -1,0 +1,60 @@
+$blue: #2D303A;
+$red: #F06C64;
+$white: #FFFFFF;
+
+.header {
+  background-color: $blue;
+}
+
+.header .wrapper {
+  width: 1020px;
+  height: 95px;
+  background-color: $blue;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40px 125px 440px 375px 1fr;
+  grid-template-rows: 1fr 1fr 40px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  color: $white;
+  grid-column: 2 / 3;
+  grid-row-start: 2;
+  align-self: end;
+  user-select: none;
+  span {
+    @extend .title;
+    color: $red;
+  }
+}
+
+.navigation {
+  grid-column: 4 / 5;
+  grid-row-start: 2;
+  align-self: end;
+  grid-template-columns: repeat(9, 1fr);
+  display: grid;
+  justify-content: space-between;
+  span {
+    display: block;
+    text-align: center;
+  }
+}
+
+.navigation__item {
+  text-decoration: none;
+  color: $white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  &_active {
+    color: $red;
+  }
+  &:hover {
+    font-weight: 900;
+  }
+}
