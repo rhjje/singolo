@@ -22,6 +22,6 @@
 // service5.src = servicesItem5;
 // service6.src = servicesItem6;
 
-document.querySelector('.click').addEventListener('click', () => {
-  document.querySelector('.click').src = './images/Slider.png';
-});
+// document.querySelector('.click').addEventListener('click', () => {
+//   document.querySelector('.click').src = './images/Slider.png';
+// });

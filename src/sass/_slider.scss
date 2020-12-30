@@ -1,0 +1,51 @@
+$red: #F06C64;
+
+.slider {
+  background-color: $red;
+}
+
+.slider .wrapper {
+  width: 1020px;
+  height: 600px;
+  background-color: $red;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-panel {
+  width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 16px 1fr 16px;
+}
+
+.slider-image {
+  justify-self: center;
+  align-self: center;
+}
+
+.slide-left, .slide-right {
+  height: 27px;
+  align-self: center;
+  outline: none;
+  border: none;
+  background: none;
+  background-size: contain;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.slide-right {
+  background: url('../assets/icons/arrow-right.svg') no-repeat 50% 50%;
+}
+
+.slide-left {
+  background: url('../assets/icons/arrow-left.svg') no-repeat 50% 50%;
+}
