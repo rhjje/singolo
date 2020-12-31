@@ -1,0 +1,36 @@
+.footer {
+  background-color: $blue;
+}
+
+.footer .wrapper {
+  width: 1020px;
+  height: 76px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40px 118px 1fr 152px 40px;
+}
+
+.footer__copyright {
+  grid-column-start: 2;
+  align-self: center;
+  font-weight: 900;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: #666D89;
+}
+
+.footer__contacts {
+  grid-column-start: -3;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 32px);
+  gap: 8px;
+  div img {
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(.9);
+    }
+  }
+}

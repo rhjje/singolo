@@ -1,0 +1,135 @@
+$input: #D6564F;
+$input-placeholder: #F48C8F;
+$text-contacts: #F0D8D9;
+
+.contacts {
+  background-color: $red;
+}
+
+.contacts .wrapper {
+  width: 1020px;
+  height: 654px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40px 620px 20px 300px 40px;
+  grid-template-rows: 60px 100px 1fr 373px 64px;
+}
+
+.contacts__header {
+  grid-area: 2 / 2 / span 1 / span 3;
+  .subtittle, .description {
+    color: $text-contacts;
+  }
+}
+
+.contacts__form {
+  grid-area: 4 / 2 / span 1 / span 1;
+}
+
+.form {
+  height: 373px;
+  display: grid;
+  grid-template-rows: 38px 16px 38px 16px 38px 16px 159px 14px 38px;
+}
+
+#name,
+#email,
+#subject,
+#describe {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding-left: 15px;
+  color: $input-placeholder;
+  background-color: $input;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: $input-placeholder;
+}
+
+input[type="text"]::-moz-placeholder {
+  color: $input-placeholder;
+}
+
+#name {
+  grid-row-start: 1;
+}
+
+#email {
+  grid-row-start: 3;
+}
+
+#subject {
+  grid-row-start: 5;
+}
+
+textarea::-webkit-input-placeholder {
+  color: $input-placeholder;
+}
+
+textarea::-moz-placeholder {
+  color: $input-placeholder;
+}
+
+#describe {
+  grid-row-start: 7;
+  resize: none;
+  padding-top: 15px;
+}
+
+#submit {
+  grid-row-start: 9;
+  width: 136px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FBC65F;
+  color: #886A30;
+  font-size: 1.4rem;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #e9bb60;
+  }
+  &:active {
+    transform: scale(.9);
+  }
+}
+
+.contacts__information {
+  grid-area: 4 / 4 / span 1 / span 1;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 20px 7px 87px 22px 63px;
+}
+
+.contacts__information-title {
+  @include card-title;
+  color: $text-contacts;
+}
+
+.contacts__information-description, .contacts__information-contacts span {
+  @include card-description;
+  color: $text-contacts;
+}
+
+.contacts__information-description {
+  grid-row-start: 3;
+}
+
+.contacts__information-contacts {
+  grid-row-start: 5;
+}
+
+.location, .phone, .email {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  gap: 10px;
+}
+
+.location div, .phone div , .email div {
+  align-self: center;
+} 
