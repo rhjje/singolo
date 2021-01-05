@@ -38,7 +38,7 @@ $text: #767E9E;
 }
 
 .our-services .wrapper {
-  width: 1020px;
+  max-width: 1020px;
   height: 500px;
   margin: 0 auto;
   display: grid;
@@ -57,7 +57,7 @@ $text: #767E9E;
 
 .description {
   @include description;
-  width: 920px;
+  max-width: 920px;
 }
 
 .our-services__items {
@@ -88,4 +88,20 @@ $text: #767E9E;
 .our-services__service-text {
   grid-area: 3 / 3 / span 2 / span 1;
   @include card-description;
+}
+
+@media screen and (max-width: 1019px) {
+  .our-services .wrapper {
+    height: 675px;
+    grid-template-columns: 1fr 690px 1fr;
+    grid-template-rows: 40px 155px 30px 395px 1fr;
+  }
+
+  .our-services__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 50px;
+  }
 }

@@ -5,7 +5,7 @@ $red: #F06C64;
 }
 
 .slider .wrapper {
-  width: 1020px;
+  max-width: 1020px;
   height: 600px;
   margin: 0 auto;
   display: grid;
@@ -47,4 +47,22 @@ $red: #F06C64;
 
 .slide-left {
   background: url('../assets/icons/arrow-left.svg') no-repeat 50% 50%;
+}
+
+@media screen and (max-width: 1019px) {
+  .slider .wrapper {
+    height: 450px;
+  }
+
+  .slider-panel {
+    width: 710px;
+  }
+
+  .slider-image {
+    width: 600px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
