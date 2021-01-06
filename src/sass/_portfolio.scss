@@ -5,11 +5,11 @@ $category-active: #DEDEDE;
 }
 
 .portfolio .wrapper {
-  width: 1020px;
+  max-width: 1020px;
   height: 870px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 40px 1fr 40px;
+  grid-template-columns: 1fr 940px 1fr;
   grid-template-rows: 60px 120px 20px 601px 1fr;
 }
 
@@ -68,4 +68,17 @@ $category-active: #DEDEDE;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 187px);
   gap: 20px;
+}
+
+@media screen and (max-width: 1019px) {
+  .portfolio .wrapper {
+    height: 1102px;
+    grid-template-columns: 1fr 700px 1fr;
+  }
+
+  .portfolio__categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 187px);
+    gap: 20px;
+  }
 }

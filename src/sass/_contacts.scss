@@ -7,7 +7,7 @@ $text-contacts: #F0D8D9;
 }
 
 .contacts .wrapper {
-  width: 1020px;
+  max-width: 1020px;
   height: 654px;
   margin: 0 auto;
   display: grid;
@@ -17,8 +17,14 @@ $text-contacts: #F0D8D9;
 
 .contacts__header {
   grid-area: 2 / 2 / span 1 / span 3;
+  display: grid;
+  grid-template-rows: 40px 1fr;
   .subtittle, .description {
     color: $text-contacts;
+  }
+
+  .description {
+    align-self: end;
   }
 }
 
@@ -132,4 +138,33 @@ textarea::-moz-placeholder {
 
 .location div, .phone div , .email div {
   align-self: center;
-} 
+}
+
+@media screen and (max-width: 1019px) {
+  .contacts .wrapper {
+    height: 631px;
+    grid-template-columns: 1fr 442px 30px 221px 1fr;
+    grid-template-rows: 53px 150px 1fr 373px 45px;
+  }
+
+  .contacts__header {
+    grid-template-rows: 1fr 96px;
+    .description {
+      align-self: start;
+    }
+  }
+
+  .contacts__information {
+    width: 221px;
+    height: 225px;
+    grid-template-rows: 15px 5px 142px 63px;
+  }
+
+  .contacts__information-description {
+    text-align: justify;
+  }
+
+  .contacts__information-contacts {
+    grid-row-start: 4;
+  }
+}
