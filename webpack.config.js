@@ -6,6 +6,7 @@ const {
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const RemovePlugin = require('remove-files-webpack-plugin');
 
 
 module.exports = () => {
@@ -79,6 +80,13 @@ module.exports = () => {
           { from: 'src/assets/images', to: 'assets/images' },
           { from: 'src/assets/icons', to: 'assets/icons' },
         ],
+      }),
+      new RemovePlugin({
+        before: {
+          include: [
+            './dist',
+          ],
+        },
       }),
     ],
   };

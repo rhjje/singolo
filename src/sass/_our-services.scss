@@ -105,3 +105,26 @@ $text: #767E9E;
     column-gap: 50px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .our-services .wrapper {
+    height: 1032px;
+    grid-template-columns: 1fr 315px 1fr;
+    grid-template-rows: 25px 270px 1fr 705px 1fr;
+  }
+
+  .our-services__header {
+    display: grid;
+    grid-template-rows: 36px 1fr;
+    .description {
+      padding-top: 18px;
+    }
+  }
+
+  .our-services__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);;
+    gap: 15px;
+  }
+}

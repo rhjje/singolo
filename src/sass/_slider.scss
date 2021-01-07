@@ -66,3 +66,21 @@ $red: #F06C64;
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .slider .wrapper {
+    height: 220px;
+  }
+
+  .slider-panel {
+    width: 355px;
+  }
+
+  .slider-image {
+    width: 290px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

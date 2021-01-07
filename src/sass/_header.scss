@@ -57,3 +57,37 @@ $white: #FFFFFF;
     font-weight: 900;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .header .wrapper {
+    height: 71px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    grid-template-rows: 1fr 25px 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .burger-menu {
+    grid-row-start: 2;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .burger-menu__button {
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
